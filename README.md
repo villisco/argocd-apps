@@ -9,6 +9,13 @@ This repository uses __plain manifest files__ (no kustomize/helm) !
 
 > NB! Projects __default__ & __argocd__ are only for root apps - do not create new Applications under them!
 
+## Linked repositories
+
+- https://github.com/villisco/argocd-setup - creates the __apps__ application that auto syncs this repository.
+- https://github.com/villisco/argocd-projects - sync source for __projects__ (kind: Application)
+
+## Repository structure
+
 ```
 ├── README.md
 ├── dev                       <!--- kubernetes cluster
