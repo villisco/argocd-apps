@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: zipkin
+  namespace: namespace1
+spec:
+  destination:
+    namespace: namespace1
+    server: https://kubernetes.default.svc
+  project: project1
+  source:
+    helm:
+      valueFiles:
+        - values.test.yaml
+    path: helm-chart
+    repoURL: https://<app_repo_url>/zipkin.git
+    targetRevision: HEAD
